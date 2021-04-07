@@ -34,7 +34,7 @@ var generateAccessToken = function (req, resp) {
 
     var expiredTs = req.query.expiredTs;
     if (!expiredTs) {
-        expiredTs = 0;
+        expiredTs = 7200;
     }
 
     var token = new Token(APP_ID, APP_CERTIFICATE, channel, uid);
